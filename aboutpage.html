@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>About me</title>
+	
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,900,700' rel='stylesheet' type='text/css'>
+	<link href='http://weloveiconfonts.com/api/?family=entypo' rel='stylesheet' type='text/css'>
+	<style>
+	
+		html,
+		body {
+			font-family: "arial", sans-serif;
+			font-size: 20px;
+			height: 100%;
+			margin: 0;
+			background: url(https://i.guim.co.uk/img/static/sys-images/Guardian/About/General/2012/3/13/1331656224558/Albert-Einstein-he-was-an-007.jpg?w=1200&h=632&q=55&auto=format&usm=12&fit=crop&s=e4b5b84c6d7caa8b23135359c0cda93e)
+						no-repeat center center fixed;
+			background-size: cover;
+		}
+		
+		
+		
+			/* media query per cambiare menu in funione della dimensione della finestra del browser */
+			
+			
+			@media screen and (min-width: 1000px) {
+				.drop-menu_nav,
+				.drop-menu_nav * {
+					display: none;
+				}	  
+			
+				
+			}
+			
+			
+			@media screen and (max-width: 1000px) {
+				.large-window-menu,
+				.large-window-menu *,
+				#dropdown_nav {
+					display: none;
+				} 				
+				
+				footer {
+					font-size: 0.8rem;
+				}
+				
+			}
+			
+			
+			/* end of media query per cambiare menu in funione della dimensione della finestra del browser */
+			
+			
+			
+			/* header */
+
+		body > header {
+			color: white;
+			text-align: center;
+		}
+
+		header > * {
+			font-size: 1.5rem;
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+	
+			/* nav */
+		nav, 
+		nav *	{
+			font-size: 1.2rem;
+			height: 2rem;
+			line-height: 2rem;
+			margin: 0 0 0.5rem 0;
+			text-align: left;
+			
+			color: white;
+			text-decoration: none;
+		}
+		
+		nav {
+			padding: 0 0.25rem 0 1.85rem;
+			background: rgba(100, 100, 100, 0.8);
+		}
+		
+		nav * {
+			padding: 0 0.25rem;
+		}	
+
+
+		nav li {
+			display: inline;
+		}
+
+		* html nav ul {
+			margin-left: -0.75rem;
+		} 
+
+		header nav a:hover {
+			padding: 0.45rem 0.25rem 0.28rem 0.25rem;
+			background: darkorange;
+			color: white;
+		}
+		
+		#logo {
+			padding: 0.45rem 0.5rem 0.7rem 0.5rem;
+			background: #117474;
+			font-family: "Roboto";
+			font-weight: 700;
+		}
+		
+		
+		
+				/* texts inset shadow workaround */
+				
+						.depth {
+							color: rgba(255, 255, 255, 0.8);
+							font-size: 1.2rem;
+							text-shadow: -0.03rem -0.06rem 0.02rem black, 0 0 0 #117474;
+						}
+						
+				/* texts inset shadow workaround */
+				
+				
+
+		.selecteditem {
+			padding: 0.45rem 0.25rem 0.28rem 0.25rem;
+			background: darkorange;
+			color: white;
+		}
+		
+		
+								/* DROPDOWN MENU */
+										
+								
+							.dropbtn {
+								display: inline-block;
+								text-decoration: none;
+								padding: 0 0.25rem;
+							}
+
+							.dropdown:hover .dropbtn {
+								padding: 0 0.25rem;
+								margin-bottom: -0.05rem;
+								background: darkorange;
+								color: white;
+							}
+
+							li.dropdown {
+								height: 1.6rem;
+								line-height: 1.6rem;
+								display: inline-block;
+							}
+
+							.dropdown-content {
+								height: 1.6rem;
+								line-height: 1.6rem;
+								display: none;
+								position: absolute;
+								min-width: 8rem;
+								
+								margin-left: -0.25rem;
+							}
+
+							.dropdown-content a {
+								height: 1.6rem;
+								line-height: 1.6rem;
+								font-size: 0.8rem;
+								color: white;
+								background: rgba(100, 100, 100, 1);
+								padding: 0 0.5rem 0 0.5rem;
+								margin: 0;
+								text-decoration: none;
+								display: block;
+								text-align: left;
+							}
+
+							.dropdown-content a:hover {
+								height: 1.6rem;
+								line-height: 1.6rem;
+								margin: 0; 
+								padding: 0 0.5rem 0 0.5rem;
+								background: darkorange;
+								color:white;
+								line-height: 1.6rem;
+							}
+
+							.dropdown:hover .dropdown-content {
+								height: 1.6rem;
+								line-height: 1.6rem;
+								display: block;
+							}
+							
+
+								
+						
+								/* icon */
+								
+						.drop-menu_nav {
+							padding: 0 0.25rem;
+							position: fixed;
+							top: 0;
+							left: 0;
+							height: 2.45rem;
+							color: white;
+							text-decoration: none;
+							background: rgba(100, 100, 100, 1);							
+						}
+						
+						.menu-icon {
+							font-size: 2rem;
+							height: 2.45rem;
+							line-height: 2.45rem;
+						}
+						
+						.drop-menu_nav:hover {
+							background: darkorange;
+							color: white;
+						}
+				
+							/*menu*/
+
+						ul.menu_nav li {
+							padding-left: 0;
+							list-style: none;
+							margin:-0.37rem;
+						}
+						
+						
+						
+						
+						/* SECOND LEVEL DROPDOWN */
+						
+							.dropdown-content.dropdown_2level {
+								margin-left: -0.5rem;
+							}
+							
+							
+							
+							
+							.dropbtn_2level {
+								display: inline-block;
+								text-decoration: none;
+								padding: 0 0.25rem;
+								
+							}
+							
+							.dropdown_2level:hover .dropbtn_2level {
+								padding: 0 0.5rem;
+								margin-bottom: -0.05rem;
+								margin-left: -0.2rem;
+								background: darkorange;
+								color: white;
+							}
+
+							li.dropdown_2level {
+								height: 1.6rem;
+								line-height: 1.6rem;
+								display: inline-block;
+								
+							}
+
+							.dropdown-content_2level {
+								height: 1.6rem;
+								line-height: 1.6rem;
+								display: none;
+								position: absolute;
+								min-width: 20rem;
+								
+								margin-left: 7.75rem;
+								margin-top: -1.55rem;
+							}
+
+							.dropdown-content_2level a {
+								height: 1.6rem;
+								line-height: 1.6rem;
+								font-size: 0.8rem;
+								color: white;
+								background: rgba(120, 120, 120, 1);
+								padding: 0 0.5rem 0 0.5rem;
+								margin: 0;
+								text-decoration: none;
+								display: block;
+								text-align: left;
+							}
+
+							.dropdown-content_2level a:hover {
+								height: 1.6rem;
+								line-height: 1.6rem;
+								margin: 0; 
+								padding: 0 0.5rem 0 0.5rem;
+								background: darkorange;
+								color:white;
+								line-height: 1.6rem;
+							}
+
+							.dropdown_2level:hover .dropdown-content_2level {
+								height: 1.6rem;
+								line-height: 1.6rem;
+								display: block;
+							}
+							
+						
+						
+						/* END OF SECOND LEVEL DROPDOWN */
+						
+
+			/* END OF DROPDOWN MENU */
+		
+		
+		 /* end of nav*/
+		 
+		 
+		 .container {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+		 }
+		 
+		 
+		 /* main */
+		 
+		main {
+			flex: 1;
+			display: flex;
+			flex-flow: column wrap;
+			min-height: calc(100vh - 6rem);
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+		
+		main > section {
+			flex: 0 1;
+			min-width: 30%;
+			max-width: 70%;
+			margin: 1.5rem 1rem;
+			padding: 1.4rem;
+			line-height: 1.5rem;
+			background: rgba(100, 100, 100, 0.6);
+			color: white;
+			box-shadow: 0.4rem 0.4rem 1rem rgba(0, 0, 0, 0.5);
+		}
+		
+		
+		.name, .jobtitle {
+			font-family: "Robot", "Arial Black", Gadget, sans-serif;
+			font-size: 1.9rem;
+			color: #117474;
+			font-weight: 900;
+			line-height: 3rem;
+		}
+	
+		
+					/* img inset shadow workaround */
+							
+							.img-shadow {
+								position: relative;
+								max-width: 100%;
+								float: right;
+								display: inline-block;
+								margin-top: -0.25rem;
+								}
+								
+							.img-shadow::before {
+								content: "";
+								position: absolute;
+								top: 0;
+								bottom: 0;
+								left: 0;
+								right: 0;
+								box-shadow: inset 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.6);
+								margin-right: -1.8rem; 
+							   } 
+								   
+							.img-shadow img {
+								border: 0.05rem solid rgba(80, 80, 80, 0.8);
+								float: right;
+								height: 5.5rem;
+								margin-right: -1.8rem; 
+							} 
+								
+					/* img inset shadow workaround */
+
+		aside {
+			flex: 1;
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: flex-start;
+			align-items: flex-end;
+		}
+		
+		aside * {
+			list-style: none;
+			
+			color: white;
+			text-decoration: none;
+		}
+			
+			
+			
+		aside > section {
+			flex: 0 0;
+			min-width: 45%;
+			max-width: 50%;
+			text-align: left;
+			margin: 1.5rem 1rem;
+			padding: 0.6rem;
+			line-height: 2.5rem;
+			background: rgba(100, 100, 100, 0.6);
+			color: white;
+			box-shadow: 0.4rem 0.4rem 1rem rgba(0, 0, 0, 0.5);
+		}
+		
+		aside > section h2 {
+			text-align: center;
+		}
+		
+		
+		aside h2, aside p {
+			margin: 0.2rem;
+		}
+		
+		
+	
+		
+		
+			/* footer */
+		footer {
+			clear: both;			
+		}
+		
+		footer > nav {
+			height: 3rem;
+			background: rgba(100, 100, 100, 0.8);
+			margin: 0;
+			padding: 0 1rem 0 0;
+		}
+		
+		footer nav *	{
+			font-size: 0.8rem;
+			height: 3rem;
+			line-height: 3rem;
+			margin: 0.5rem 0 0 0;
+		}
+		
+		footer ul, footer li {
+			line-height: 3rem;
+			text-align: left;
+		}
+		
+					
+		#copyright {
+			padding: 0 0 0 2rem;
+			font-size: 0.8rem;
+		}
+		
+			
+		
+		#background-credit > * {
+			color: rgba(255, 255, 255, 0.8);
+			font-size: 0.5rem;
+			height: 3rem;
+			line-height: 0.75rem;
+			text-align: left;
+			background: rgba(100, 100, 100, 0.1);
+			width: 320px;
+			margin: 0 0 0 1rem;
+			padding: 0.2rem 0.6rem;
+		}
+		
+		
+		.offscreen {
+		position: absolute !important;
+		clip: rect(1px, 1px, 1px, 1px); /* IE6, IE7 */
+		clip: rect(1px 1px 1px 1px);
+		padding: 0;
+		border: 0;
+		height: 1px;
+		width: 1px;
+		overflow: hidden;
+		}
+		
+			/* Social icons */
+			
+			.wrapper {
+			  padding: 0.5rem 0 0;
+			  text-align: left;
+			}
+
+			.social {
+			  display: inline-block;
+			  float: left;
+			  width: 2rem;
+			  height: 2rem;
+			  margin: 0 0.3rem;
+			  line-height: 2rem;
+			  font-family: Entypo;
+			  font-size: 2rem;
+			  text-align: center;
+			  overflow: hidden;
+			}
+			
+			.social_text {
+				line-height: 2rem;
+			}
+
+			/* Social icons */
+			
+			
+			
+			
+	</style>
+	
+</head>
+
+<body>
+
+	<header>
+		<h1 class="offscreen">Albert personal blog</h1>
+		
+		
+		<nav>
+			<h2 class="offscreen">Navigation menu</h2>
+			
+			<ul>
+				<li id="logo" class="depth">albert's blackboard</li>
+				<li id="dropdown_nav" class="large-window-menu dropdown">
+					<a href="" class="dropbtn">physics</a>
+					<div class="dropdown-content">
+						<a href="">The Principal Ideas of the Theory of Relativity</a>
+						<a href="">On Gravitational Waves</a>
+						<a href="">Time, Space, and Gravitation</a>
+						<a href="">On the Special and General Theory of Relativity</a>
+					</div>
+				</li>
+				<li class="large-window-menu"><a href="">phylosophy</a></li>
+				<li class="large-window-menu"><a href="">politics</a></li>
+				<li class="large-window-menu"><a href="">music</a></li>
+				<li class="large-window-menu"><a class="selecteditem" href="">about&amp;contact</a></li>
+			</ul>
+		</nav>
+		
+		
+		<!-- NAV per finestre con larghezza inferiore a 768px -->
+		<nav class="drop-menu_nav">
+			<h2 class="offscreen">Dropdown menu for small screens</h2>
+			<ul class="menu_nav">
+				<li class="dropdown">
+					<a href="" class="dropbtn" id="menu-icon">&#9776;</a>
+					<div class="dropdown-content dropdown_2level">
+							<a href="" class="dropbtn_2level">physics</a>
+							<div class="dropdown-content_2level">
+								<a href="">The Principal Ideas of the Theory of Relativity</a>
+								<a href="">On Gravitational Waves</a>
+								<a href="">Time, Space, and Gravitation</a>
+								<a href="">On the Special and General Theory of Relativity</a>
+							</div>
+						<a href="">phylosophy</a>
+						<a href="">politics</a>
+						<a href="">music</a>
+						<a class="selecteditem" href="">about&amp;contact</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		
+		
+		
+	</header>
+
+	<div class="container">
+		
+		<main>
+			<section itemscope itemtype="http://schema.org/Person">
+			<h2 class="offscreen">Biographical information</h2>
+				I'm
+				<span class="name depth" itemprop="givenName">Albert</span>
+				<span class="name depth" itemprop="familyName">Einstein</span>
+				and I'm a
+				<span class="jobtitle depth" itemprop="jobTitle">theoretical physicist.</span>
+				
+				<br>
+				<br>
+				
+				I was born on 
+				<time datetime="1879-03-14" itemprop="birthDate">14 March 1879</time>
+				in
+				<span itemprop="birthPlace">Ulm</span>
+				<span itemprop="nationality">(Germany)</span>.
+				
+				<br>
+				
+				<div>
+				<figure>
+					<a href="" class="img-shadow"><img id="elsa" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Einstein_Albert_Elsa_LOC_32096u.jpg" alt="Einstein with his second wife Elsa" title="Elsa and me."></a>
+				</figure>
+				I live with my wife 
+				<span itemprop="spouse">Elsa Löwenthal</span>
+				<section itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<h2 class="offscreen">Postal address</h2>
+					at
+					<span itemprop="streetAddress">Ehrenbergstraße 33</span>,
+					<br>
+					<span itemprop="postalCode">14195</span>
+					<span itemprop="addressLocality">Berlin</span>
+					(<span itemprop="addressCountry">Germany</span>)
+				</section>
+				
+				</div>
+				
+				<br>
+				
+				I'm a  foreign member of the
+				<span itemprop="affiliation">Royal Netherlands Academy of Arts and Sciences</span>
+				and, at present, I'm a
+				<span itemprop="jobTitle"><q>bijzonder hoogleraar</q> (special professor)</span>
+				at the
+				<span itemprop="worksFor">Leiden University</span>,
+				in the Netherlands, since
+				<time datetime="1920-10-27">27 October 1920</time>.
+				
+			</section>
+			
+			<!--
+			<section>
+			</section>
+			-->
+			
+			
+			
+		</main>
+		
+		<aside>
+		<h2 class="offscreen">Contacts sidebar</h2>
+			<section>
+				<h2>Contact me:</h2>
+					<div itemscope itemtype="https://schema.org/Person" class="wrapper">
+							<p class="social_text"><span class="social"><a href=""><span>&#62217;</span></a></span><a href=""><span itemprop="url">twitter.com/alberteinstein</span></a></p>
+							<p class="social_text"><span class="social"><a href=""><span>&#62233;</span></a></span><a href=""><span itemprop="url">linkedin.com/in/al-einstein</span></a></p>
+							<p class="social_text"><span class="social"><a href=""><span>&#62222;</span></a></span><a href=""><span itemprop="url">facebook.com/AlbertE/</span></a></p>
+							<p class="social_text"><span class="social"><a href=""><span>&#62265;</span></a></span><a href=""><span itemprop="url">skype.com/Albert E.</span></a></p>
+							<p class="social_text"><span class="social"><a href="mailto:"><span>&#9993;</span></a></span><a href=""><span itemprop="email">albert.einstein@albert.mail</span></a></p>
+							<p class="social_text"><span class="social"><a href=""><span>&#128222;</span></a></span><a href=""><span itemprop="telephone">012-345678</span></a></p>
+					</div>
+			</section>
+		</aside>
+		
+	</div>
+	
+	<footer>
+		<span id="background-credit"><span>Background: Me in 1920. Photograph: Roger Viollet/Getty Images</span></span>
+		<nav>
+			<h2 class="offscreen">Footer with copyright, table of content, disclaimer e credits</h2>
+			
+			<ul>
+				<li id="copyright">©1921 Albert&amp;Elsa Einstein</li>
+				<li>
+					<a href="javascript:(function(){var i=function(a){this.sections=[];this.startingNode=a};i.prototype={heading:false,append:function(a){a.container=this;this.sections.push(a)},asHTML:function(a){var b=u(this.heading);if(a)b='&lt;a href=&quot;#'+v(this.startingNode)+'&quot;&gt;'+b+&quot;&lt;/a&gt;&quot;;return b+q(this.sections,a)}};var q=function(a,b){for(var f=&quot;&quot;,c=0;c&lt;a.length;c++)f+=&quot;&lt;li&gt;&quot;+a[c].asHTML(b)+&quot;&lt;/li&gt;&quot;;return f==&quot;&quot;?f:&quot;&lt;ol&gt;&quot;+f+&quot;&lt;/ol&gt;&quot;},r=function(a){a=a.heading;return h(a)?j(a):1},u=function(a){if(h(a)){if(k(a)==&quot;HGROUP&quot;)a=a.getElementsByTagName(&quot;h&quot;+
+					-j(a))[0];return a.textContent||a.innerText||&quot;&lt;i&gt;No text content inside &quot;+a.nodeName+&quot;&lt;/i&gt;&quot;}return&quot;&quot;+a},v=function(a){var b=a.getAttribute(&quot;id&quot;);if(b)return b;do b=&quot;h5o-&quot;+ ++s;while(t.getElementById(b));a.setAttribute(&quot;id&quot;,b);return b},e,d,g,s,t,w=function(a,b,f){var c=a;a:for(;c;){b(c);if(c.firstChild){c=c.firstChild;continue a}for(;c;){f(c);if(c.nextSibling){c=c.nextSibling;continue a}c=c==a?null:c.parentNode}}},x=function(a){if(!h(o(g)))if(l(a)||m(a)){e!=null&amp;&amp;g.push(e);e=a;d=new i(a);e.outline=
+					{sections:[d],startingNode:a,asHTML:function(c){return q(this.sections,c)}}}else if(e!=null)if(h(a)){if(d.heading)if(j(a)&gt;=r(n(e.outline))){var b=new i(a);e.outline.sections.push(b);d=b;d.heading=a}else{b=false;var f=d;do{if(j(a)&lt;r(f)){b=new i(a);f.append(b);d=b;d.heading=a;b=true}f=f.container}while(!b)}else d.heading=a;g.push(a)}},y=function(a){var b=o(g);if(h(b))b==a&amp;&amp;g.pop();else{if((l(a)||m(a))&amp;&amp;!d.heading)d.heading=&quot;&lt;i&gt;Untitled &quot;+k(a)+&quot;&lt;/i&gt;&quot;;if(l(a)&amp;&amp;g.length&gt;0){e=g.pop();d=n(e.outline);for(b=
+					0;b&lt;a.outline.sections.length;b++)d.append(a.outline.sections[b])}else if(m(a)&amp;&amp;g.length&gt;0){e=g.pop();for(d=n(e.outline);d.sections.length&gt;0;)d=n(d)}else if(l(a)||m(a))d=e.outline.sections[0]}},k=function(a){return a.tagName.toUpperCase()},p=function(a){return function(b){return z(b)&amp;&amp;(new RegExp(a,&quot;i&quot;)).test(k(b))}},m=p(&quot;^BLOCKQUOTE|BODY|DETAILS|FIELDSET|FIGURE|TD$&quot;),l=p(&quot;^ARTICLE|ASIDE|NAV|SECTION$&quot;),h=p(&quot;^H[1-6]|HGROUP$&quot;),z=function(a){return a&amp;&amp;a.tagName},j=function(a){var b=k(a);if(b==&quot;HGROUP&quot;)for(b=
+					1;b&lt;=6;b++){if(a.getElementsByTagName(&quot;H&quot;+b).length&gt;0)return-b}else return-parseInt(b.substr(1))},n=function(a){return o(a.sections)},o=function(a){return a[a.length-1]};HTML5Outline=function(a){s=0;t=a.ownerDocument||window.document;d=e=null;g=[];w(a,x,y);return e!=null?e.outline:null}})();
+					;(function(){var b=function(e,f){for(var d=0;d&lt;e.length;d++)e[d].setAttribute(&quot;style&quot;,f)},g=HTML5Outline(document.body).asHTML(true),a=document.createElement(&quot;div&quot;);b([a],&quot;position:fixed;top:10px;right:10px;border:2px solid #000;background:rgba(255,255,255,.9);padding:15px;z-index:999;max-height:400px;overflow:auto;font-size:11px;font-family:Verdana, sans-serif;&quot;);a.innerHTML=g;b(a.getElementsByTagName(&quot;li&quot;),&quot;list-style:decimal outside;margin-left:20px;font-size:11px;font-family:Verdana, sans-serif;&quot;);
+					b(a.getElementsByTagName(&quot;ol&quot;),&quot;margin: 0;padding:0;font-size:11px;font-family:Verdana, sans-serif;&quot;);b(a.getElementsByTagName(&quot;a&quot;),&quot;color:#008;text-decoration:underline;font-size:11px;font-family:Verdana, sans-serif;&quot;);var c=a.insertBefore(document.createElement(&quot;a&quot;),a.firstChild);b([c],&quot;float: right; margin: 0 0 5px 5px; padding: 5px; border: 1px #008 solid;color:#00f;background-color:#ccf;&quot;);c.innerHTML=&quot;Close&quot;;c.href=&quot;#&quot;;c.onclick=function(){document.body.removeChild(a);a=c=null};document.body.appendChild(a)})();
+					;" title="Table of contents">Table of contents</a>
+				</li>
+				<li><a href="">Disclaimer</a></li>
+				<li><a href="">Credits</a></li>		
+			</ul>
+		</nav>
+		
+		
+	</footer>
+	
+</body>
+
+</html>
