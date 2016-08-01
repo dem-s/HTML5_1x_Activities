@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Homer</title>
+	
+	<style>
+	  #myCanvas {
+			border: 2px solid darkorange;
+			background: cadetblue;
+		}
+	</style>
+</head>
+
+<body onload="init();">
+	
+	<canvas id="myCanvas" width=236 height=360>
+		Canvas is not supported by your browser...
+	</canvas>
+
+	<script>
+	  	var canvas, ctx;
+		
+		function init() {
+			canvas = document.querySelector("#myCanvas");
+			ctx = canvas.getContext('2d');
+			
+			arm();
+			shirt1();
+			shirt();
+			eyeDx();
+			eyeSx();
+			pupils();
+			
+			hand();
+			
+			face();
+			ear();
+			beard();
+			mouth();
+			tongue();
+			hairs();
+			pointingFinger();
+			
+			
+		}
+		
+		function drawCircle() {
+			ctx.arc(0,0,100,0,2*Math.PI); //ctx.arc(cx,cy,radius,startAngle,endAngle[,drawInverse]);
+			ctx.stroke();
+			ctx.fill();
+		}
+		
+		function eyeSx() {
+			ctx.save();
+			ctx.beginPath();
+			ctx.translate(142,113);
+			ctx.scale(0.25,0.25);
+			ctx.lineWidth = 20;
+			ctx.fillStyle = "rgba(255,255,255,1)";
+			drawCircle();	
+			ctx.restore();
+		}
+		
+		function pupils() {
+			ctx.save();
+			ctx.beginPath();
+			ctx.translate(136,114);
+			ctx.scale(0.05,0.05);
+			drawCircle();
+			ctx.restore();
+			ctx.save();
+			ctx.beginPath();
+			ctx.translate(187,105);
+			ctx.scale(0.045,0.045);
+			drawCircle();
+			ctx.restore();
+		}
+		
+		
+		function eyeDx() {
+			ctx.save();
+			ctx.beginPath();
+			ctx.translate(187,105);
+			ctx.scale(0.22,0.22);
+			ctx.fillStyle = "rgba(255,255,255,1)";
+			ctx.lineWidth = 30;
+			drawCircle();
+			ctx.restore();
+		}
+		
+		function beard() {
+			ctx.save();
+			ctx.beginPath();
+			ctx.moveTo(200,135);
+			ctx.quadraticCurveTo(210,140,215,158);
+			ctx.bezierCurveTo(245,182,150,190,141,184);
+			ctx.bezierCurveTo(95,180,150,125,200,135);
+			ctx.moveTo(190,184);
+			ctx.bezierCurveTo(184,200,208,200,180,213);
+			ctx.quadraticCurveTo(168,230,140,215);
+			ctx.lineTo(140,180);
+			ctx.fillStyle = "#ED9E1D";
+			ctx.lineWidth = 3;
+			ctx.fill();
+			ctx.stroke();
+			ctx.restore();
+		}
+		
+		function mouth() {
+			ctx.save();
+			ctx.beginPath();
+			ctx.translate(27,75);
+			ctx.scale(0.8,0.6);
+			ctx.moveTo(190,184);
+			ctx.bezierCurveTo(184,200,208,200,180,213);
+			ctx.quadraticCurveTo(168,220,140,215);
+			ctx.lineTo(140,186);
+			ctx.fillStyle = "black";
+			ctx.lineWidth = 3;
+			ctx.fill();
+			ctx.stroke();
+			ctx.restore();
+		}
+		
+		function tongue() {
+			ctx.save();
+			ctx.beginPath();
+			ctx.translate(153,204);
+			ctx.scale(0.12,0.1);
+			ctx.arc(0,0,100,0,Math.PI,true);
+			ctx.fillStyle = "red";
+			ctx.fill();
+			ctx.restore();
+		}
+		
+		function hand() {
+			ctx.save();
+			ctx.beginPath();
+			ctx.translate(63,282);
+			ctx.rotate(-Math.PI/13);
+			ctx.scale(0.82,0.70);
+			ctx.fillStyle = "#FEC901";
+			ctx.lineWidth = 14;
+			drawCircle();
+			ctx.restore();
+			
+			ctx.save();
+			ctx.beginPath();
+			ctx.moveTo(19,245);
+			ctx.bezierCurveTo(14, 390, 145, 340, 47, 220);
+			ctx.lineTo(75, 200);
+			ctx.quadraticCurveTo(10, 190, -30, 265);
+			ctx.bezierCurveTo(-10, 385, 60, 350, 45, 330);
+			ctx.fillStyle = "#FEC901";
+			ctx.lineWidth = 4;
+			ctx.fill();
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.moveTo(132, 283);
+			ctx.bezierCurveTo(20, 268, 80, 380, 140, 325);
+			ctx.quadraticCurveTo(180, 275, 135, 245);
+			ctx.fillStyle = "#FEC901";
+			ctx.lineWidth = 4;
+			ctx.fill();
+			ctx.stroke();
+			ctx.restore();
+		}
+		
+		function pointingFinger() {
+			ctx.save();
+			ctx.beginPath();
+			ctx.translate(100,224);
+			ctx.scale(0.57,0.55);
+			ctx.fillStyle = "#FEC901";
+			ctx.lineWidth = 14;
+			drawCircle();
+			ctx.restore();
+		}
+		
+		function hairs() {
+			ctx.save();
+			ctx.beginPath();
+			ctx.translate(69,117);
+			ctx.rotate(5.8);
+			ctx.scale(1.6, 1.6);
+			ctx.moveTo(2,15);
+			ctx.lineTo(4,0);
+			ctx.lineTo(12,15);
+			ctx.lineTo(20,0);
+			ctx.lineTo(22,15);
+			ctx.moveTo(66, -37);
+			ctx.arc(49, -32, 18, -Math.PI/6, Math.PI, true);
+			ctx.moveTo(78, -29);
+			ctx.arc(62, -32, 15, -Math.PI/8, Math.PI, true);
+			ctx.lineWidth = 2;
+			ctx.stroke();
+			
+			ctx.restore();
+		}
+		
+		function face() {
+			ctx.save();
+			ctx.beginPath();
+			ctx.moveTo(98,162);
+			ctx.arc(101,225, 58, -Math.PI/1.95, -Math.PI/2.6);
+			ctx.arc(174,198, 60, 9.4*Math.PI/8, 11.3*Math.PI/8);
+			ctx.bezierCurveTo(216, 150, 216, 101, 168, 120); //ctx.bezierCurveTo(controlX1, controlY1, controlX2, controlY2, endx, endy);
+			ctx.arc(142, 112, 26.5, Math.PI/9, 17*Math.PI/9);
+			ctx.arc(187,105, 23, 10.5*Math.PI/9, -Math.PI/4.5);
+			ctx.arc(198,85,8,0.9*Math.PI/5, 12.3*Math.PI/8,true);
+			ctx.lineTo(189, 50);
+			ctx.bezierCurveTo(178,-5,40,2,82,100);
+			ctx.lineTo(94,134);
+			ctx.arc(98,148,13,-5*Math.PI/8, 1.8*Math.PI/4, true);
+			ctx.closePath();
+			ctx.moveTo(192,252);
+			ctx.bezierCurveTo(225,300,180,245,183,214);
+			ctx.lineTo(150,218);
+			ctx.lineTo(150,240);
+			ctx.lineTo(188,263);
+			ctx.lineWidth = 3;
+			ctx.fillStyle = "#FEC901";
+			ctx.fill();
+			ctx.stroke();
+			ctx.restore();
+		}
+		
+		function ear() {
+			ctx.save();
+			ctx.beginPath();
+			ctx.arc(88,146,11,-Math.PI/8,Math.PI/4);
+			ctx.lineWidth = 3;
+			ctx.stroke();
+			ctx.restore();
+		}
+		
+		function shirt1() {
+			ctx.save();
+			ctx.beginPath();
+			ctx.moveTo(218,300);
+			ctx.lineTo(194,251);
+			ctx.lineTo(215,252);
+			ctx.lineTo(215,247);
+			ctx.bezierCurveTo(225,255,260,257,219,303);
+			ctx.fillStyle = "rgba(255,255,255,1)";
+			ctx.lineWidth = 3;
+			ctx.fill();
+			ctx.stroke();
+			ctx.restore();
+		}
+		
+		function shirt() {
+			ctx.save();
+			ctx.beginPath();
+			ctx.moveTo(194,251);
+			ctx.lineTo(188,263);
+			ctx.lineTo(120,215);
+			ctx.lineTo(20,400);
+			ctx.lineTo(280,400);
+			ctx.bezierCurveTo(250, 350, 250, 330, 218,300);
+			ctx.bezierCurveTo(225,300,180,245,183,214);
+			ctx.lineTo(207,218);
+			ctx.lineTo(215,252);
+			ctx.lineTo(194,251);
+			ctx.lineTo(207,218);
+			ctx.closePath();
+			ctx.fillStyle = "rgba(255,255,255,1)";
+			ctx.lineWidth = 3;
+			ctx.fill();
+			ctx.stroke();
+			ctx.restore();
+		}
+		
+		function arm() {
+			ctx.save();
+			ctx.beginPath();
+			ctx.moveTo(250,250);
+			ctx.arc(240,305,30,0,2*Math.PI);
+			ctx.fillStyle = "#FEC901";
+			ctx.fill();
+			ctx.restore();
+		}
+	</script>
+</body>
+</html>
